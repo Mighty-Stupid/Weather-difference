@@ -1,0 +1,188 @@
+@keyframes slideInFade {
+    0% {
+      transform: translateY(-100%); /* Start off-screen to the left */
+    }
+    70%{
+        transform: translateY(50px);
+    }
+    100% {
+      transform: translateY(0); /* End at its normal position */
+    }
+  }
+
+  @keyframes FadeIn{
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+  }
+
+.Card-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 600px;
+    margin: 0px auto;
+    padding: 10px;
+    animation: slideInFade ease-out 500ms;
+}
+
+.Card{
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px 0.1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 500px;
+    height: 500px;
+    text-align: center;
+    padding: 10px;
+    background: url('../src/assets/blue2Line.png');
+    background-size: cover;
+    background-position: -240px;
+    background-position-y: -88px ;
+}
+
+.Header{
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    animation: FadeIn ease-out 1s;
+}
+
+.InputButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.Search{
+    width: 54px;
+    height: 34px;
+}
+
+.Search img{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(88, 172, 172);
+    max-width: 100%;
+    max-height: 100%;
+    transition: 200ms;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+.Search :hover{
+    background-color: rgba(56, 109, 109, 0.836);
+}
+
+.Search :active{
+    background-color: rgba(56, 109, 109, 0.644);
+    transform: translateY(2px);
+}
+
+.Weather-div{
+    box-sizing: border-box;
+}
+
+.Weather-div span{
+    color: rgb(81, 81, 255);
+}
+
+.text{
+    margin: 0 auto;
+    text-align: left;
+    display: inline-block;
+    border-radius: 14px;
+    background-color: rgb(230, 233, 255);
+    transform: translateY(20px);
+}
+
+.text p{
+    margin: 24px;
+}
+
+.Line{
+    height: 5px;
+    width: 100%;
+    border-top: 5px rgba(105, 105, 105, 0.5) dashed;
+}
+
+.Card-difference{
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 12px 0.1px black;
+    height: 500px;
+    flex: 0 0 500px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url('../src/assets/TopBlue.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -124px ;
+}
+
+.Difference-text{
+    color: rgb(0, 0, 0);
+    background-color: rgb(230, 238, 255);
+    margin-top: 64px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+}
+
+.Loading-text{
+    margin: 147px 0px 147px 0px;
+}
+
+
+
+
+@media(max-width: 1550px){
+    .Card{
+        flex:0 0 400px;
+        background-position: -268px;
+        background-position-y: -88px ;
+    }
+    .Card-difference{
+        flex: 0 0 400px;
+        background-position-y: -64px;
+    }
+    p{
+
+    }
+}
+
+@media(max-width: 1240px){
+    .Card-container{
+        flex-wrap: wrap;
+    }
+    .Card-difference{
+        order: 1;
+        flex: 0 0 800px;
+        background-position-y: -284px ;
+    }
+    .Card{
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 819px){
+    .Card-difference{
+        flex: 0 0 400px;
+        background-position-y:-74px ;
+    }
+    .Header{
+        width: 400px;
+    }
+}
