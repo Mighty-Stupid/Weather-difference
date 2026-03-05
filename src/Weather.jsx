@@ -1,8 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import './Weather.css'
 import './Spinner.css'
-import '../src/assets/search.png'
-import '../src/assets/blueLine.png'
+import Blue_line from '../src/assets/blueLine.png';
 
 const Weather = () => {
     const inputRef1 = useRef();
