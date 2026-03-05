@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import './Weather.css'
 import './Spinner.css'
-import Blue_line from '../src/assets/blueLine.png';
+import Search_png from '../src/assets/search.png';
 
 const Weather = () => {
     const inputRef1 = useRef();
@@ -85,7 +85,7 @@ const Weather = () => {
                     <div className="InputButton">
                         <input placeholder="City Name 1" type="text" ref={inputRef1} />
                         <div className="Search">
-                            <img src='../src/assets/search.png' onClick={() => search(inputRef1.current.value, setWeatherData1, setLoading1)}></img>
+                            <img src={Search_png} onClick={() => search(inputRef1.current.value, setWeatherData1, setLoading1)}></img>
                         </div>
                     </div>
                     {loading1 ? ( // Если данные не получены показывай загрузку
@@ -111,7 +111,7 @@ const Weather = () => {
                     <div className="InputButton">
                         <input placeholder="City Name 2" type="text" ref={inputRef2} />
                         <div className="Search">
-                            <img src='../src/assets/search.png' onClick={() => search(inputRef2.current.value, setWeatherData2, setLoading2)}></img>
+                            <img src={Search_png} onClick={() => search(inputRef2.current.value, setWeatherData2, setLoading2)}></img>
                         </div>
                     </div>
 
